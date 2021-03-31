@@ -1,25 +1,22 @@
 <template>
- <div>
-   <router-view>
-     <router-hand>
-       <router-foot>
-         
-       </router-foot>
-     </router-hand>
-
-   </router-view>
- </div>
+  <div id="app">
+    <router-view>
+      <router-hand>
+        <router-foot> </router-foot>
+      </router-hand>
+    </router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+};
 </script>
 
 <style>
