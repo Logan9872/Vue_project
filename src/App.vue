@@ -3,7 +3,7 @@
    <router-view>
      <router-hand>
        <router-foot>
-         
+        
        </router-foot>
      </router-hand>
 
