@@ -3,6 +3,7 @@ import axios from 'axios'
 import VueAxios from 'vue-ax'
 import router from './router.js'
 import App from './App.vue'
+import env from './env'
 
 //根据前端的跨域方式做调整/a/b
 axios.defaults.baseURL = '/api';
