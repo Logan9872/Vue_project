@@ -1,5 +1,5 @@
 // storage分裝
-const STORAGE_KEY ='mail' ；
+const STORAGE_KEY ='mail' ;
 
 export default{
 
