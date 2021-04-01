@@ -8,7 +8,7 @@
 </template>
 <script>
 import NavHeader from "./../components/NavHeader";
-import NavHeader from "./../components/NavHeader";
+import NavFooter from "./../components/NavHeader";
 
 export default {
   name: "nav-home",
