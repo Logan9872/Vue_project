@@ -14,8 +14,10 @@ export default {
   data() {
     return {};
   },
+
   mounted() {
-    storage.setItem("user", { a: 1 });
+    // storage.setItem("user", { a: 1 });
+    storage.clear("a", "user");
   },
 };
 </script>
