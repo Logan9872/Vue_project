@@ -1,9 +1,20 @@
 <template>
   <div>
-<script>
-  export default({
-    name:'index'
-  })
-</script>
+    home
+    <nav-header></nav-header>
+    <router-view></router-view>
+    <nav-footer></nav-footer>
   </div>
 </template>
+<script>
+import NavHeader from "./../components/NavHeader";
+import NavHeader from "./../components/NavHeader";
+
+export default {
+  name: "nav-home",
+  components: {
+    NavHeader,
+    NavFooter,
+  },
+};
+</script>
