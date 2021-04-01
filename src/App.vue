@@ -1,19 +1,15 @@
 <template>
   <div id="app">
-    <router-view>
-      <router-hand>
-        <router-foot> </router-foot>
-      </router-hand>
-    </router-view>
+    <router-hand></router-hand>
+    <router-view></router-view>
+    <router-foot></router-foot>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
 };
 </script>
 
