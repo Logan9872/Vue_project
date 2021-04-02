@@ -4,14 +4,14 @@
       <div class="containter">
         <div class="topbar-menu">
           <a herf="javascript:;">小米商城</a>
-          <a herf="javascript:;">MUI</a>
-          <a herf="javascript:;">云服务</a>
-          <a herf="javascript:;">协议规则</a>
+          <a herf="javascript: ;">MUI</a>
+          <a herf="javascript: ;">云服务</a>
+          <a herf="javascript: ;">协议规则</a>
         </div>
         <div class="topbar-user">
-          <a herf="javascript:;">登录</a>
-          <a herf="javascript:;">注册</a>
-          <a herf="javascript:;" class="my-cart"
+          <a herf="javascript: ;">登录</a>
+          <a herf="javascript: ;">注册</a>
+          <a herf="javascript: ;" class="my-cart"
             ><sapn class="icon-cart"></sapn>购物车</a
           >
         </div>
@@ -47,8 +47,17 @@ export default {
       }
       .my-cart {
         width: 110px;
-        background-color: #666666;
+        background-color: #ff6600;
         text-align: center;
+        color: #ffffff;
+        .icon-cart {
+          display: inline-block;
+          width: 16px;
+          height: 12px;
+          background: url("/imgs/icon-cart-checked.png") no-repeat center;
+          background-size: contain;
+          margin-right: 4px;
+        }
       }
     }
   }
