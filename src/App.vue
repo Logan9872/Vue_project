@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import storage from "./storage ";
+import storage from "./storage/index.js";
 export default {
   name: "app",
   components: {},

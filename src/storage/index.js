@@ -32,7 +32,7 @@ export default {
             delete val[module_name][key];
         } else {
             delete val[key];
-        } \
+        }
         this.setItem(val);
     }
 }

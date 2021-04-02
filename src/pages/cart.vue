@@ -6,12 +6,12 @@
   </div>
 </template>
 <script>
-import NavFooter from "../components/NavFooter.vue";
-import orderHeader from "../components/orderHeader.vue";
+import NavFooter from "../components/NavFooter";
+import OrderHeader from "../components/OrderHeader";
 export default {
   name: "index",
   components: {
-    orderHeader,
+    OrderHeader,
     NavFooter,
   },
 };

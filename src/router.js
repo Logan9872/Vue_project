@@ -3,11 +3,12 @@ import Router from 'vue-router'
 import Home from './pages/home'
 import Index from './pages/index'
 import Product from './pages/product'
-import Detail from './pages/deatil'
+import Detail from './pages/detail'
 import Cart from './pages/cart'
 import Order from './pages/order'
 import OrderConfirm from './pages/orderConfirm'
-import OrderPay from './pages/OrderPay'
+import OrderPay from './pages/orderPay'
+import OrderList from './pages/orderList'
 import AliPay from './pages/alipay'
 Vue.use(Router);
 
@@ -27,7 +28,7 @@ export default new Router({
                 name: 'product',
                 component: Product,
             }, {
-                path: '/detail',
+                path: '/detail/:id',
                 name: 'detail',
                 component: Detail,
             }
@@ -45,17 +46,17 @@ export default new Router({
             component: Order,
             children: [
                 {
-                    path: 'list',
+                    path: '/list',
                     name: 'order-list',
                     component: OrderList,
                 },
                 {
-                    path: 'confirm',
+                    path: '/confirm',
                     name: 'order-confirm',
                     component: OrderConfirm,
                 },
                 {
-                    path: 'pay',
+                    path: '/pay',
                     name: 'order-pay',
                     component: OrderPay,
                 },
