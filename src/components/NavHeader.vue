@@ -11,7 +11,9 @@
         <div class="topbar-user">
           <a herf="javascript:;">登录</a>
           <a herf="javascript:;">注册</a>
-          <a herf="javascript:;">购物车</a>
+          <a herf="javascript:;" class="my-cart"
+            ><sapn class="icon-cart"></sapn>购物车</a
+          >
         </div>
       </div>
     </div>
@@ -35,6 +37,19 @@ export default {
       width: 1226px;
       margin-right: auto;
       margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        display: inline-block;
+        color: #b0b0b0;
+        margin-right: 17px;
+      }
+      .my-cart {
+        width: 110px;
+        background-color: #666666;
+        text-align: center;
+      }
     }
   }
 }
