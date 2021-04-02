@@ -1,23 +1,32 @@
 <template>
   <div class="header">
     <div class="nav-topbar">
-      <div class="containter">
+      <div class="container">
         <div class="topbar-menu">
-          <a herf="javascript:;">小米商城</a>
-          <a herf="javascript: ;">MUI</a>
-          <a herf="javascript: ;">云服务</a>
-          <a herf="javascript: ;">协议规则</a>
+          <a href="javascript:;">小米商城</a>
+          <a href="javascript: ;">MUI</a>
+          <a href="javascript: ;">云服务</a>
+          <a href="javascript: ;">协议规则</a>
         </div>
         <div class="topbar-user">
-          <a herf="javascript: ;">登录</a>
-          <a herf="javascript: ;">注册</a>
-          <a herf="javascript: ;" class="my-cart"
-            ><sapn class="icon-cart"></sapn>购物车</a
+          <a href="javascript: ;">登录</a>
+          <a href="javascript: ;">注册</a>
+          <a href="javascript: ;" class="my-cart"
+            ><span class="icon-cart"></span>购物车</a
           >
         </div>
       </div>
     </div>
-    <div class="nav-header"></div>
+    <div class="nav-header">
+      <div class="container">
+        <div class="header-logo">
+          <a href="/#/index"></a>
+          <div class="header-menu"></div>
+
+          <div class="header-search"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -27,6 +36,8 @@ export default {
 </script>
 
 <style lang ="scss">
+@import "src/api/scss/base.scss";
+
 .header {
   .nav-topbar {
     height: 39px;
@@ -34,9 +45,6 @@ export default {
     background-color: #333333;
     color: #b0b0b0;
     .container {
-      width: 1226px;
-      margin-right: auto;
-      margin-left: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,6 +65,46 @@ export default {
           background: url("/imgs/icon-cart-checked.png") no-repeat center;
           background-size: contain;
           margin-right: 4px;
+        }
+      }
+    }
+  }
+  .nav-header {
+    .container {
+      height: 112px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header-logo {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        background-color: #ff6600;
+        a {
+          display: inline-block;
+          width: 110;
+          height: 55px;
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: url("/imgs/mi-logo.png");
+            background-size: 55px;
+            transition: margin 0.2s;
+          }
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: url("/imgs/mi-home.png");
+            background-size: 55px;
+          }
+          &:hover:before {
+            margin-left: -55px;
+            transition: margin 0.2s;
+          }
         }
       }
     }
