@@ -29,7 +29,28 @@
           </div>
           <div class="item-menu">
             <span>RedMi红米</span>
-            <div class="children"></div>
+            <div class="children">
+              <ul>
+                <li class="product">
+                  <a href="" target="_blank">
+                    <div class="pro-img">
+                      <img src="" />
+                    </div>
+                    <div class="pro-name">小米CC9</div>
+                    <div class="pro-price">1799元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href="" target="_blank">
+                    <div class="pro-img">
+                      <img src="" />
+                    </div>
+                    <div class="pro-name">小米CC9</div>
+                    <div class="pro-price">1799元</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="item-menu">
             <span>电视</span>
@@ -55,6 +76,7 @@ export default {
 <style lang ="scss">
 @import "src/api/scss/base.scss";
 @import "src/api/scss/mixin.scss";
+@import "src/api/scss/config.scss";
 .header {
   .nav-topbar {
     height: 39px;
@@ -128,6 +150,7 @@ export default {
             cursor: pointer;
           }
           &:hover {
+            color: $colorA;
           }
         }
       }
