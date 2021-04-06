@@ -1,6 +1,13 @@
 <template>
   <div class="service">
-    <div class="container"></div>
+    <div class="container">
+      <ul>
+        <li><span class="icon-setting"></span>预约维修服务</li>
+        <li><span class="icon-7day"></span>7天无理由退货</li>
+        <li><span class="icon-15day"></span>15天免费换货</li>
+        <li><span class="icon-post"></span>满150元包邮</li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -9,36 +16,35 @@ export default {
 };
 </script>
 <style lang ="scss">
-@import "src/api/scss/config.scss";
-.footer {
-  height: 234px;
-  border-top: 4px solid $colorA;
-  background-color: #333333;
-  color: #999999;
+@import "src/api/scss/mixin.scss";
+.service {
+  padding: 33px 0;
+  color: #666666;
   font-size: 16px;
-  text-align: center;
-  .footer-logo {
-    margin-top: 46px;
-    margin-bottom: 31px;
-    img {
-      width: 53px;
-      height: 36px;
-      margin-bottom: 13px;
-    }
-  }
-  .footer-link {
-    a {
-      color: #999999;
-      display: inline-block;
-    }
+
+  li {
+    display: inline-block;
+    width: 24.9%;
+    text-align: center;
+    border-right: 1px solid #e5e5e5;
     span {
-      margin: 0 10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
-    margin-bottom: 13px;
-  }
-  .copyright {
-    .domain {
-      color: #ff6600;
+    .icon-setting {
+      @include bgImg(20px, 20px, "/imgs/icon-setting.png");
+    }
+    .icon-7day {
+      @include bgImg(20px, 20px, "/imgs/icon-7day.png");
+    }
+    .icon-15day {
+      @include bgImg(20px, 20px, "/imgs/icon-15day.png");
+    }
+    .icon-psot {
+      @include bgImg(20px, 20px, "/imgs/icon-post.png");
     }
   }
 }

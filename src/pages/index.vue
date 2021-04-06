@@ -1,9 +1,11 @@
 <template>
-  <div>servicebar</div>
+  <div>
+    <service-bar></service-bar>
+  </div>
 </template>
 
 <script>
-import ServiceBar from "src/components/ServiceBar.vue";
+import ServiceBar from "./../components/ServiceBar.vue";
 export default {
   name: "index",
   components: {
