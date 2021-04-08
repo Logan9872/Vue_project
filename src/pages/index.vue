@@ -87,7 +87,9 @@
                   <div class="item-info">
                     <h3>{{ item.name }}</h3>
                     <p>{{ item.subtitle }}</p>
-                    <p class="price">{{ item.price }}元</p>
+                    <p class="price" @click="addCart(item.id)">
+                      {{ item.price }}元
+                    </p>
                   </div>
                 </div>
               </div>
@@ -102,7 +104,9 @@
       sureText="查看详情"
       btnType="1"
       modalType="middle"
-      v-bind:showModal="true"
+      v-bind:showModal="showModal"
+      v-on:submit="goToCart"
+      v-on:cancel="showModal = false"
     >
       <template v-slot:body>
         <p>商品添加成功</p>
@@ -197,10 +201,8 @@ export default {
           img: "/imgs/ads/ads-4.jpg",
         },
       ],
-      phoneList: [
-        [1, 1, 1, 1],
-        [1, 1, 1, 1],
-      ],
+      phoneList: [],
+      showModal: false,
     };
   },
   mounted() {
@@ -219,6 +221,21 @@ export default {
           res.list = res.list.slice(6, 14);
           this.phoneList = [res.list.slice(0, 4), res.list.slice(4, 8)];
         });
+    },
+    addCart() {
+      this.showModal = true;
+      // this.axios
+      //   .post("/carts", {
+      //     productId: id,
+      //     select: true,
+      //   })
+      //   .then(() => {})
+      //   .catch(() => {
+      //     this.sjowModal = true;
+      //   });
+    },
+    goToCart() {
+      this.$router.push("/cart");
     },
   },
 };
@@ -387,11 +404,8 @@ export default {
                 font-weight: bold;
                 cursor: pointer;
                 &:after {
-                  display: inline-block;
-                  width: 22px;
-                  height: 22px;
-                  background: url "imgs/icon-cart-hover.png" no-repeat center;
-                  content: "";
+                  @include bgImg(22px, 22px, "/imgs/icon-cart-hover.png");
+                  content: " ";
                   margin-left: 5px;
                   vertical-align: middle;
                 }
