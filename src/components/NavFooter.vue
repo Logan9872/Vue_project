@@ -34,7 +34,7 @@ export default {
 };
 </script>
 <style lang ="scss">
-@import "src/api/scss/config.scss";
+@import "./../assets/scss/config.scss";
 .footer {
   height: 234px;
   border-top: 4px solid $colorA;

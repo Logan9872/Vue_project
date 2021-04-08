@@ -97,11 +97,23 @@
       </div>
     </div>
     <service-bar></service-bar>
+    <modal
+      title="提示"
+      sureText="查看详情"
+      btnType="1"
+      modalType="middle"
+      v-bind:showModal="true"
+    >
+      <template v-slot:body>
+        <p>商品添加成功</p>
+      </template>
+    </modal>
   </div>
 </template>
 
 <script>
 import ServiceBar from "./../components/ServiceBar.vue";
+import Modal from "./../components/Modal";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 // import "swiper/swiper-bundle.css";
@@ -111,6 +123,7 @@ export default {
     Swiper,
     SwiperSlide,
     ServiceBar,
+    Modal,
   },
   data() {
     return {
@@ -199,10 +212,11 @@ export default {
         .get("/products", {
           params: {
             categoryId: 100012,
-            pageSize: 8,
+            pageSize: 14,
           },
         })
         .then((res) => {
+          res.list = res.list.slice(6, 14);
           this.phoneList = [res.list.slice(0, 4), res.list.slice(4, 8)];
         });
     },
@@ -210,8 +224,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "src/api/scss/mixin.scss";
-@import "src/api/scss/config.scss";
+@import "./../assets/scss/config.scss";
+@import "./../assets/scss/mixin.scss";
 .index {
   .swiper-box {
     .nav-menu {
