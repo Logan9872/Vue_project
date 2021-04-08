@@ -6,4 +6,21 @@
         background-color: $colorI;
         opacity         : 0.5;
     }
+
+    .model-dialog {
+        @include position(absolute, 40%, 50%, 660px, auto);
+        background-color: $colorG;
+        transform       : translate(-50%, -50%);
+
+        .modal-header {
+            height          : 60px;
+            background-color: $colorGJ;
+            padding         : 0 25px;
+            line-height     : 60px;
+            font-size       : $fontI;
+
+            .icon-close {}
+
+        }
+    }
 }

@@ -16,7 +16,7 @@ export default {
 };
 </script>
 <style lang ="scss">
-@import "src/api/scss/mixin.scss";
+@import "./../assets/scss/mixin.scss";
 .service {
   padding: 33px 0;
   color: #666666;
