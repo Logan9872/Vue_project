@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import storage from "./storage/index.js";
 export default {
   name: "app",
   components: {},
@@ -14,8 +13,20 @@ export default {
   },
 
   mounted() {
-    // storage.setItem("user", { a: 1 });
-    storage.clear("a", "user");
+    this.getUser();
+    this.getCartCount();
+  },
+  methods: {
+    getUser() {
+      this.axios.get("/user").then(() => {
+        // 保存到vuex
+      });
+    },
+    getCartCount() {
+      this.axios.get("/carts/products/sum").then(() => {
+        // 保存到vuex
+      });
+    },
   },
 };
 </script>
