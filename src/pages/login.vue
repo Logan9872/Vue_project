@@ -11,13 +11,13 @@
             ><span>扫码登录</span>
           </h3>
           <div class="input">
-            <input type="text" placeholder="请输入帐号" v-modal="username" />
+            <input type="text" placeholder="请输入帐号" v-model="username" />
           </div>
           <div class="input">
             <input
               type="password"
               placeholder="请输入密码"
-              v-modal="password"
+              v-model="password"
             />
           </div>
           <div class="btn-box">
