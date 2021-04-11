@@ -5,6 +5,7 @@ import router from './router.js'
 import App from './App.vue'
 import VueLazyLoad from 'vue-lazyload'
 import VueCookie from 'vue-cookie'
+import store from './store'
 // import env from './env'
 
 //根据前端的跨域方式做调整/a/b
@@ -40,5 +41,6 @@ Vue.config.productionTip = false
 
 new Vue({
     router,
+    store,
     render: h => h(App)
 }).$mount('#app')
