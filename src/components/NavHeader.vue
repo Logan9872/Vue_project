@@ -100,7 +100,6 @@ export default {
     login() {
       this.$router.push("/login");
     },
-
     logout() {
       this.axios.post("/user/logout").then(() => {
         this.$message.success("退出成功");
@@ -153,9 +152,6 @@ export default {
         color: #ffffff;
         .icon-cart {
           @include bgImg(16px, 12px, "/imgs/icon-cart-checked.png");
-          display: inline-block;
-          width: 16px;
-          height: 12px;
           margin-right: 4px;
           background: url("/imgs/icon-cart-checked.png") no-repeat center;
           background-size: contain;
