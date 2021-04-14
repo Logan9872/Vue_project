@@ -13,10 +13,8 @@
           <a href="javascript: ;" v-if="!username" @click="login">登录</a>
           <a href="javascript:;" v-if="username" @click="logout">退出</a>
           <a href="javascript: ;" v-if="username">我的订单</a>
-          <a href="javascript: ;" class="my-cart"
-            ><span class="icon-cart" @click="goToCart"></span>购物车({{
-              cartCount
-            }})</a
+          <a href="javascript: ;" @click="goToCart" class="my-cart"
+            ><span class="icon-cart"></span>购物车({{ cartCount }})</a
           >
         </div>
       </div>
@@ -102,7 +100,6 @@ export default {
     },
     logout() {
       this.axios.post("/user/logout").then(() => {
-        this.$message.success("退出成功");
         this.$cookie.set("userId", "", { expires: "-1" });
         this.$store.dispatch("saveUserName", "");
         this.$store.dispatch("saveCartCount", "0");
